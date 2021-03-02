@@ -10,11 +10,9 @@
 #define CYN "\e[36m"
 #define RST "\e[0m"
 
-#define VAL 10000000
+#define VAL 999999
 
-int main() {
-    printf("\e[?25l");
-    do {
+/* H-CODE
         printf(GRN "     ####\\\n");
         printf(BLU "  <<<"GRN"#########\\\n");
         printf(GRN "     #################\n");
@@ -28,6 +26,17 @@ int main() {
         printf(GRN "     #########/\n");  
         printf(GRN "     ####/\n" RST);
         i = VAL; while (i-- > 0);
+        system("clear");
+*/
+
+int main() {
+    printf("\e[?25l");
+    do {
+        printf(GRN"HEADS\n");
+        int i = VAL; while (i-->0);
+        system("clear");
+        printf(RED"TAILS\n");
+        i = VAL; while (i-->0);
         system("clear");
     } while (1);
     printf("\e[?25h");
